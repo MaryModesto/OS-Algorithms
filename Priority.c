@@ -24,6 +24,7 @@ typedef struct {
 
 void DisplayTable(nodePtr L);
 void AddInQueue(QUEUE *Q, nodeType elem);
+void Reset(QUEUE *Q);
 
 int main()
 {
@@ -75,6 +76,10 @@ int main()
 
                 AddInQueue(&queue, elem);
                 pID++;
+                break;
+            case 4:
+                Reset(&queue);
+                printf("\n= All Processes Reset =\n");
                 break;
 
             default:
@@ -149,4 +154,14 @@ void AddInQueue(QUEUE *Q, nodeType elem) {
         }
     }
     //printf("yes");
+}
+
+void Reset(QUEUE *Q) {
+    nodePtr temp;
+
+    while (Q->FRONT != NULL) {
+        temp = Q->FRONT;
+        Q->FRONT = Q->FRONT->prev;
+        free(temp);
+    }
 }

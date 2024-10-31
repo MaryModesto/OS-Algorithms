@@ -2,8 +2,9 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/output/SJF'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003760, symSize: 0x214 }
-  - { offsetInCU: 0xE7, offset: 0xE7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003760, symSize: 0x214 }
-  - { offsetInCU: 0x148, offset: 0x148, size: 0x8, addend: 0x0, symName: _DisplayTable, symObjAddr: 0x214, symBinAddr: 0x100003974, symSize: 0xB4 }
-  - { offsetInCU: 0x16C, offset: 0x16C, size: 0x8, addend: 0x0, symName: _AddInQueue, symObjAddr: 0x2C8, symBinAddr: 0x100003A28, symSize: 0x34C }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000036AC, symSize: 0x240 }
+  - { offsetInCU: 0xE7, offset: 0xE7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000036AC, symSize: 0x240 }
+  - { offsetInCU: 0x148, offset: 0x148, size: 0x8, addend: 0x0, symName: _DisplayTable, symObjAddr: 0x240, symBinAddr: 0x1000038EC, symSize: 0xB4 }
+  - { offsetInCU: 0x16C, offset: 0x16C, size: 0x8, addend: 0x0, symName: _AddInQueue, symObjAddr: 0x2F4, symBinAddr: 0x1000039A0, symSize: 0x34C }
+  - { offsetInCU: 0x1E5, offset: 0x1E5, size: 0x8, addend: 0x0, symName: _Reset, symObjAddr: 0x640, symBinAddr: 0x100003CEC, symSize: 0x64 }
 ...
