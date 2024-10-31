@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/output/Priority'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000036D0, symSize: 0x23C }
+  - { offsetInCU: 0xE7, offset: 0xE7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000036D0, symSize: 0x23C }
+  - { offsetInCU: 0x148, offset: 0x148, size: 0x8, addend: 0x0, symName: _DisplayTable, symObjAddr: 0x23C, symBinAddr: 0x10000390C, symSize: 0xC4 }
+  - { offsetInCU: 0x16C, offset: 0x16C, size: 0x8, addend: 0x0, symName: _AddInQueue, symObjAddr: 0x300, symBinAddr: 0x1000039D0, symSize: 0x34C }
+...
