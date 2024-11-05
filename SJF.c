@@ -20,15 +20,18 @@ typedef struct Node {
 typedef struct {
     nodePtr FRONT;
     nodePtr BACK;
+    int count; 
 }QUEUE;
 
 void DisplayTable(nodePtr L);
 void AddInQueue(QUEUE *Q, nodeType elem);
 void Reset(QUEUE *Q);
+void PrintLine(int x);
+void DisplayGantt(QUEUE Q);
 
 int main()
 {
-    QUEUE queue = {NULL, NULL};
+    QUEUE queue = {NULL, NULL, 0};
     int input = 1, x;
     char pID = 'A';
 
@@ -57,6 +60,9 @@ int main()
         switch (input) {
             case 1:
                 DisplayTable(queue.FRONT);
+                break;
+            case 2: 
+                DisplayGantt(queue);
                 break;
             case 3:
                 printf("Please input an answer for the following fields...\n\n");
@@ -117,6 +123,7 @@ void AddInQueue(QUEUE *Q, nodeType elem) {
             Q->FRONT = newProcess;
             Q->BACK = newProcess;
             newProcess->prev = NULL;
+             Q->count++;
         } else {
             nodePtr *trav, temp;
 
@@ -146,6 +153,7 @@ void AddInQueue(QUEUE *Q, nodeType elem) {
             if (newProcess->next == NULL) {
                 Q->FRONT = newProcess;
             }
+             Q->count++;
         }
     }
     //printf("yes");
@@ -159,4 +167,84 @@ void Reset(QUEUE *Q) {
         Q->FRONT = Q->FRONT->prev;
         free(temp);
     }
+}
+
+
+void PrintLine(int x){
+
+   int y = 0;
+
+    while (y < x)
+    {
+        printf("+------------");
+        y++;
+        if (y == x)
+        {
+            printf("+\n");
+        }
+    }
+}
+
+void DisplayGantt(QUEUE Q)
+{
+    nodePtr current = Q.FRONT;
+    int time = 0, totalSegments = Q.count+1; 
+
+    while (current != NULL) {
+        if (current->info.arrival_Time > time) {
+            totalSegments++; // Add one for idle time segment
+            time = current->info.arrival_Time;
+        }
+        time += current->burst_Time;
+        current = current->next;
+        printf("%d", totalSegments);
+    }
+
+    // Print top border of the Gantt chart
+    printf("\nGantt Chart:\n");
+    PrintLine(totalSegments);
+
+    time = 0;
+    current = Q.FRONT;
+
+    // Step 1: Print process IDs with idle time handling
+    while (current != NULL) {
+        if (current->info.arrival_Time > time) {
+            
+            printf("|%-4sIdle%4s", "","");
+            time = current->info.arrival_Time; 
+           
+        }
+        printf("|%-6s%c%5s", "",current->info.process_ID,"");
+        time += current->burst_Time;  
+        current = current->prev;
+    }
+    printf("|\n");
+
+    PrintLine(totalSegments);
+
+    // Step 2: Reset variables for timing calculations and print times below Gantt chart
+    current = Q.FRONT;
+    time = 0;
+    int endTime;
+  
+    while (current != NULL) {
+        if (current->info.arrival_Time > time) {
+            
+            printf("%-13d", time);
+            time = current->info.arrival_Time;
+        }
+        printf("%-13d", time);
+        time += current->burst_Time;  
+        endTime = time;  
+        current = current->prev;
+    }
+    printf("%-12d\n", endTime);  
+
+    current = Q.FRONT;
+    time = 0;
+
+    // Print bottom border
+    PrintLine(totalSegments);
+
 }

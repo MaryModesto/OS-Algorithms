@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "AER51.C": "cpp",
+        "string.h": "c",
+        "stdio.h": "c"
+    }
+}
