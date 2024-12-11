@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/IO-Management/output/FCFS'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _calculateFCFS, symObjAddr: 0x0, symBinAddr: 0x100003C28, symSize: 0xF0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _calculateFCFS, symObjAddr: 0x0, symBinAddr: 0x100003C28, symSize: 0xF0 }
+  - { offsetInCU: 0xB9, offset: 0xB9, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xF0, symBinAddr: 0x100003D18, symSize: 0x1A0 }
+...

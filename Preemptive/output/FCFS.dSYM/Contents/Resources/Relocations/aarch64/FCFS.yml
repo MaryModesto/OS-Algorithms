@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/Preemptive/output/FCFS'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _calculateTimes, symObjAddr: 0x0, symBinAddr: 0x100003754, symSize: 0x2A0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _calculateTimes, symObjAddr: 0x0, symBinAddr: 0x100003754, symSize: 0x2A0 }
+  - { offsetInCU: 0xC7, offset: 0xC7, size: 0x8, addend: 0x0, symName: _calculateAverages, symObjAddr: 0x2A0, symBinAddr: 0x1000039F4, symSize: 0xD8 }
+  - { offsetInCU: 0x14D, offset: 0x14D, size: 0x8, addend: 0x0, symName: _displayResults, symObjAddr: 0x378, symBinAddr: 0x100003ACC, symSize: 0x158 }
+  - { offsetInCU: 0x1B7, offset: 0x1B7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4D0, symBinAddr: 0x100003C24, symSize: 0x23C }
+...

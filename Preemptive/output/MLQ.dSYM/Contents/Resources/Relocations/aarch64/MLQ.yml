@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/Preemptive/output/MLQ'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _roundRobin, symObjAddr: 0x0, symBinAddr: 0x100003570, symSize: 0x228 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _roundRobin, symObjAddr: 0x0, symBinAddr: 0x100003570, symSize: 0x228 }
+  - { offsetInCU: 0xC7, offset: 0xC7, size: 0x8, addend: 0x0, symName: _fcfs, symObjAddr: 0x228, symBinAddr: 0x100003798, symSize: 0x1A0 }
+  - { offsetInCU: 0x131, offset: 0x131, size: 0x8, addend: 0x0, symName: _calculateAverages, symObjAddr: 0x3C8, symBinAddr: 0x100003938, symSize: 0xCC }
+  - { offsetInCU: 0x1B7, offset: 0x1B7, size: 0x8, addend: 0x0, symName: _displayResults, symObjAddr: 0x494, symBinAddr: 0x100003A04, symSize: 0x158 }
+  - { offsetInCU: 0x221, offset: 0x221, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x5EC, symBinAddr: 0x100003B5C, symSize: 0x298 }
+...

@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/marymode/Desktop/s c h o o l/OS CODES/Preemptive/output/roundrobin'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _calculateTimes, symObjAddr: 0x0, symBinAddr: 0x10000366C, symSize: 0x344 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _calculateTimes, symObjAddr: 0x0, symBinAddr: 0x10000366C, symSize: 0x344 }
+  - { offsetInCU: 0xF0, offset: 0xF0, size: 0x8, addend: 0x0, symName: _calculateAverages, symObjAddr: 0x344, symBinAddr: 0x1000039B0, symSize: 0xD8 }
+  - { offsetInCU: 0x176, offset: 0x176, size: 0x8, addend: 0x0, symName: _displayResults, symObjAddr: 0x41C, symBinAddr: 0x100003A88, symSize: 0x158 }
+  - { offsetInCU: 0x1E0, offset: 0x1E0, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x574, symBinAddr: 0x100003BE0, symSize: 0x26C }
+...
